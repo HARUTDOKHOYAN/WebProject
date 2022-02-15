@@ -1,0 +1,204 @@
+//constant
+@hovorcalor:  rgb(122, 117, 117);
+@buttonColorHover: rgb(255, 255, 255);
+@buttonColor: rgb(20, 1, 1);
+@menuColor: rgb(226, 127, 127);
+body , html{
+    overflow: auto;
+    overflow-x: hidden
+}
+.link{
+    &:hover{
+        color: @hovorcalor;
+    }
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    padding: 10px;
+    color: rgb(190, 187, 187);
+}
+.btn {
+    box-shadow: none !important;
+    border: none;
+    box-shadow: none;
+    text-align: center;
+    background-color: transparent;
+  }
+//constant 
+.header{
+    position: fixed;
+    bottom: inherit;
+    width: 100%;
+    top: 0;
+    left: 0;
+    &-contact{
+        color: @buttonColor;
+        transition: all 0.3s;
+        position: relative;
+        &:hover {
+            color:@buttonColorHover;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            opacity: 0;
+            transition: all 0.3s;
+            border-top-width: 1px;
+            border-bottom-width: 1px;
+            border-top-style: solid;
+            border-bottom-style: solid;
+            border-top-color: @buttonColorHover;
+            border-bottom-color: @buttonColorHover;
+            transform: scale(0.1, 1);
+          }
+        &:hover::before {
+            opacity: 1; 
+            transform: scale(1, 1); 
+          }
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;    
+            height: 100%;
+            z-index: 1;
+            transition: all 0.3s;
+          }
+        span{
+            transition: all 0.3s;
+        }
+        &:hover span {
+            letter-spacing: 2px;
+          }
+        &:hover::after {
+            opacity: 0; 
+            transform: scale(0.1, 1);
+            
+          }
+    }
+    .btn-list{
+        padding-top: 15px;
+        @media screen and (min-width: 767.9px) {
+            display: none;
+        }
+        .burger {
+            position: relative;
+            display: block;
+            width: 28px;
+            height: 4px;
+            margin: 0 auto;
+            background: @buttonColor;
+            transform: skew(0deg);
+            transition: all .275s;
+            &:after,&:before {
+        	content: '';
+	        display: block;
+	        height: 100%;
+	        background: @buttonColor;
+	        transition: all .275s;
+            }
+            &:after {
+                transform: translateY(-12px) translateX(0px) skew(0deg);
+            }
+            
+            &:before {
+                transform: translateY(-16px) skew(0deg);
+            }
+        }
+    }
+    &-main{
+        padding: 5px;
+        background-color: @menuColor;
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 0;
+        z-index: 50 ;
+    }
+    &-manu{
+        &-list{
+            margin-top: 5px;
+            overflow: hidden;
+            height: 0px;
+            display: block;
+            width: 70%;
+            background: @menuColor;
+            align-items: center;
+            position: absolute;
+            transition: height 0.3s ease-out;
+        }
+        @media screen and (max-width: 767.9px) {
+            display: none;
+        }
+    }
+    &-logo{
+            width: 80px;
+            height: 30px;
+    }
+}
+
+
+.contact-popup{
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    background-color: rgba(128, 128, 128, 0.397);
+    transition: all 0.5s ease;
+    .popup_close{
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: transparent;
+        border: none;
+        font-size: 1rem;
+    }
+    .popup-main{
+        position: fixed;
+        width: 50%;
+        height: 50%;
+        left: 20%;
+        top: 20%;
+        background-color: beige;
+    }
+}
+.is_popup_open{
+    display: block;
+}
+
+.shitch-panel{
+    margin-top: 70px;
+}
+
+.about{
+    text-align: center;
+}
+
+.skills{
+    text-align: center;
+}
+
+.projects{
+    text-align: center;
+}
+
+//status chang
+.is-open  { //menu list 
+    display: block;
+    height: 100px;
+    @media screen and (min-width: 767.9px) {
+        display: none;
+    }
+    }
+//status chang
