@@ -1,0 +1,28 @@
+.project-block {
+  position: relative;
+  display: inline-block;
+  width: 400px;
+  height: 400px;
+}
+.project-block-main {
+  width: 100%;
+  height: 100%;
+  background-color: blue;
+}
+.project-block-main img {
+  width: 100%;
+  height: 100%;
+}
+.project-block-top {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  opacity: 0;
+  transition: all 0.8s ease-in-out;
+  background-color: red;
+}
+.project-block-top:hover {
+  opacity: 1;
+}
