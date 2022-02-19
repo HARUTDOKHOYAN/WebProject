@@ -3,6 +3,7 @@
 @buttonColorHover: rgb(255, 255, 255);
 @buttonColor: rgb(20, 1, 1);
 @menuColor: rgb(226, 127, 127);
+@textColor: rgb(14, 10, 10);
 body , html{
     overflow: auto;
     overflow-x: hidden
@@ -26,6 +27,7 @@ body , html{
   }
 //constant 
 .header{
+    z-index: 89;
     position: fixed;
     bottom: inherit;
     width: 100%;
@@ -152,7 +154,7 @@ body , html{
     right: 0;
     width: 100%;
     height: 100%;
-    z-index: 9;
+    z-index: 99;
     background-color: rgba(128, 128, 128, 0.397);
     opacity: 0;
     visibility: collapse;
@@ -209,7 +211,7 @@ body , html{
     visibility: visible;
 }
 
-.shitch-panel{
+.switch-panel{
     margin-top: 70px;
 }
 
@@ -227,8 +229,20 @@ body , html{
 
 .project{
     text-align: center;
-    margin-bottom: 100px;
+}
 
+.info{
+    background-color: rgba(37, 34, 34, 0.815);
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    position: relative;
+    padding-top: 100px;
+    p{
+        display: inline;
+        color: @textColor;
+        margin-left: 10px;
+    }
 }
 
 //status chang
