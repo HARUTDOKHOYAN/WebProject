@@ -1,13 +1,28 @@
+.project {
+  padding: 15px;
+}
 .project-block {
   position: relative;
   display: inline-block;
   width: 400px;
   height: 400px;
 }
+@media screen and (max-width: 410.9px) {
+  .project-block {
+    width: 250px;
+    height: 250px;
+  }
+}
+@media screen and (max-width: 260.9px) {
+  .project-block {
+    width: 150px;
+    height: 150px;
+  }
+}
 .project-block-main {
   width: 100%;
   height: 100%;
-  background-color: blue;
+  background-color: beige;
 }
 .project-block-main img {
   width: 100%;
@@ -18,10 +33,100 @@
   overflow: hidden;
   width: 100%;
   height: 100%;
-  z-index: 99;
+  z-index: 50;
   opacity: 0;
   transition: all 0.8s ease-in-out;
-  background-color: red;
+  background-color: rgba(224, 224, 223, 0.815);
+}
+.project-block-top button {
+  position: absolute;
+  top: 90%;
+  left: 38%;
+}
+@media screen and (max-width: 260.9px) {
+  .project-block-top button {
+    top: 50%;
+    left: 0%;
+  }
+}
+@media screen and (max-width: 410.9px) {
+  .project-block-top button {
+    top: 80%;
+    left: 30%;
+  }
+}
+.project-block-top-btn {
+  color: #1f1c1c;
+  transition: all 0.3s;
+  position: relative;
+}
+.project-block-top-btn:hover {
+  color: #757272;
+}
+.project-block-top-btn::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-top-color: #757272;
+  border-bottom-color: #757272;
+  transform: scale(0.1, 1);
+}
+.project-block-top-btn:hover::before {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+.project-block-top-btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.3s;
+}
+.project-block-top-btn span {
+  transition: all 0.3s;
+}
+.project-block-top-btn:hover span {
+  letter-spacing: 2px;
+}
+.project-block-top-btn:hover::after {
+  opacity: 0;
+  transform: scale(0.1, 1);
+}
+.project-block-top-using p {
+  display: block;
+  font-size: 15px;
+}
+@media screen and (max-width: 410.9px) {
+  .project-block-top-using p {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 260.9px) {
+  .project-block-top-using p {
+    display: none;
+  }
+}
+@media screen and (max-width: 260.9px) {
+  .project-block-top-using h6 {
+    display: none;
+  }
+}
+.project-block-top-using img {
+  width: 50px;
+  height: 50px;
 }
 .project-block-top:hover {
   opacity: 1;
