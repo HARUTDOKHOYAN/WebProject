@@ -1,19 +1,10 @@
 const btnlist = document.querySelector('.btn-list');
 const btnContactOn = document.querySelector('.header-contact');
-const btnContactOff = document.querySelector('.popup_close');
 const menulist = document.querySelector('.header-manu-list');
 const menu = document.querySelector('.header-manu');
 
 function menuShow(e){
     menulist.classList.toggle('is-open');
-}
-function contactPopupShow(e){
-    var popup = document.querySelector('.contact-popup');
-    popup.classList.add("is_popup_open");
-}
-function contactPopupHide(e){
-    var popup = document.querySelector('.contact-popup');
-    popup.classList.remove("is_popup_open");
 }
 function menuLinksClick(e){
     if(e.target.closest(".about-link")){
@@ -34,9 +25,43 @@ function menuLinksClick(e){
     menulist.classList.toggle('is-open');
 }
 btnlist.addEventListener("click", menuShow);
-btnContactOff.addEventListener("click", contactPopupHide);
-btnContactOn.addEventListener("click",contactPopupShow);
 menu.addEventListener("click",menuLinksClick);
 menulist.addEventListener("click",menuLinksClick);
+// popup start
+let modal;
+const classNameBtn ="header-contact btn col-lg-1 offset-lg-3 col-md-2 offset-md-1 col-sm-3  offset-sm-4 col-3 offset-3";
+document.addEventListener("click", (e) => {
+ if (e.target.className == classNameBtn ) {
+    modal = document.getElementById(e.target.dataset.id);
+    openModal(modal);
+  } else if (e.target.className === "Popup-model-close btn") {
+    closeModal(modal);
+  } else {
+    return;
+  }
+});
 
+const openModal = (modal) => {
+  document.body.style.overflow = "hidden";
+  modal.setAttribute("open", "true");
+  document.addEventListener("keydown", escClose);
+  let overlay = document.createElement("div");
+  overlay.id = "Popup-modal-overlay";
+  document.body.appendChild(overlay);
+};
+
+const closeModal = (modal) => {
+  document.body.style.overflow = "auto";
+  modal.removeAttribute("open");
+  document.removeEventListener("keydown", escClose);
+  document.body.removeChild(document.getElementById("Popup-modal-overlay"));
+};
+
+const escClose = (e) => {
+    console.log(e.keyCode)
+  if (e.keyCode == 27) {
+    closeModal(modal);
+  }
+};
+// popup end
 
