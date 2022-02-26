@@ -140,74 +140,57 @@ html {
   width: 80px;
   height: 30px;
 }
-.contact-popup {
+.Popup-model {
+  display: none;
+  align-items: center;
+  justify-content: center;
   position: fixed;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
+  z-index: 99;
   width: 100%;
   height: 100%;
-  z-index: 99;
-  background-color: rgba(128, 128, 128, 0.397);
-  opacity: 0;
-  visibility: collapse;
-  -webkit-transition: opacity 0.5s ease-in;
-  -moz-transition: opacity 0.5s ease-in;
-  -ms-transition: opacity 0.5s ease-in;
-  -o-transition: opacity 0.5s ease-in;
-  transition: opacity 0.5s ease-in;
 }
-.contact-popup .popup_close {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: transparent;
-  border: none;
-  font-size: 1rem;
+.Popup-model[open] {
+  display: flex;
 }
-.contact-popup .popup-link {
-  position: absolute;
+.Popup-model-inner {
+  background-color: white;
+  border-radius: 0.5em;
+  max-width: 600px;
+  padding: 2em;
+  margin: auto;
 }
-.contact-popup .popup-link h1 {
-  padding-top: 30px;
+.Popup-model-link {
+  text-align: center;
 }
-.contact-popup .popup-main {
-  overflow: auto;
+.Popup-model-close {
+  font-size: 25px;
+}
+.Popup-model .info-bloke {
+  padding: 10px;
+}
+@media screen and (max-width: 367.9px) {
+  .Popup-model .info-bloke img {
+    display: none;
+  }
+}
+.Popup-model .info-bloke p {
+  display: inline-block;
+}
+.Popup-model-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid black;
+}
+#Popup-modal-overlay {
+  width: 100%;
+  height: 100%;
   position: fixed;
-  width: 40%;
-  height: 70%;
-  left: 30%;
-  top: 20%;
-  background-color: beige;
-}
-@media screen and (max-width: 767.9px) {
-  .contact-popup .popup-main {
-    width: 60%;
-    height: 70%;
-    left: 20%;
-    top: 20%;
-  }
-}
-@media screen and (max-width: 474.9px) {
-  .contact-popup .popup-main {
-    width: 80%;
-    height: 70%;
-    left: 10%;
-    top: 20%;
-  }
-}
-@media screen and (max-width: 321.9px) {
-  .contact-popup .popup-main {
-    width: 90%;
-    height: 70%;
-    left: 5%;
-    top: 20%;
-  }
-}
-.is_popup_open {
-  opacity: 1;
-  visibility: visible;
+  top: 0;
+  left: 0;
+  z-index: 90;
+  background-color: black;
+  opacity: 0.5;
 }
 .switch-panel {
   margin-top: 40px;
