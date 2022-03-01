@@ -4,12 +4,21 @@
         <meta charset="UTF-8">
         <title>Portfolio</title>
         <link rel="stylesheet" href="css/bootstrap.css">
-        <link rel="stylesheet" href="css/MainStyle.css"> 
-        <link rel="stylesheet" href="css/ProjectBlock.css"> 
-        <link rel="stylesheet" href="css/Tab.css"> 
+        <link rel="stylesheet" href="Less/MainStyle.css"> 
+        <link rel="stylesheet" href="Less/ProjectBlock.css"> 
+        <link rel="stylesheet" href="Less/Tab.css"> 
         <meta name="viewport" content="width=device-width, initial-scale=1">      
 </head>
   <body> 
+    <!-- Start Panel -->
+    <div class="start-point">
+      <div class="start-point-main">
+        <h1 class="start-point-text1">Hi my name is Harut</h1>
+        <h2 class="start-point-text2">I am software engineer and hardware engineer</h2>
+        <button class="start-point-btn"> Continue </button>
+      </div>
+    </div>
+    <!-- Header block -->
     <section class="header">
       <div class="header-main">
         <div class="container">
@@ -33,7 +42,7 @@
         </div>
       </div>
     </section>
-<!-- popup start-->
+    <!-- popup start-->
     <div id="Popup-model" class="Popup-model" role="dialog" tabindex="-1">
       <div class="Popup-model-inner">
         <div class="Popup-model-header">
@@ -60,14 +69,16 @@
         </div>
       </div>
     </div>
-<!-- popup end -->
+    <!-- popup end -->
+    <!-- Switch panel start-->
     <div class="switch-panel">
       <div class="row">
         <button class="btn btn-hard">Hard</button>
         <button class="btn btn-soft" >Soft</button>
       </div>
     </div>
-
+    <!-- Switch panel end -->
+    <!-- About block -->
     <section class="about">
       <div class="about-main">
         <div class="container">
@@ -79,7 +90,7 @@
         </div>
       </div>
     </section>
-
+    <!-- Skills block -->
     <section class="skills">
       <div class="skills-main">
         <div class="container">
@@ -114,29 +125,30 @@
         </div>
       </div>
     </section>
-
+    <!-- Project block -->
     <section class="project">
       <div class="project-main">
         <div class="container">
           <h2>PROJECTS</h2>
           <div class="main-tab" >
             <div class="hard-tab tab-on"> 
+
               <div class="project-block">               
                 <div class="flip-box">
                   <div class="flip-box-inner">
                     <div class="flip-box-front">
+                      <img src="img/Binary_Calculator/Binary_Calculator_logo.jpg" alt="Binary_Calculator" style="width: 140%;height: 100%;left: -30%;">
                     </div>
                     <div class="flip-box-back">
-                      <h5>Using Technology</h3>
-                        <!-- input img -->
-                        <img src="" alt="">
+                      <h3>Using Technology</h3>
+                        <img src="https://img.icons8.com/dotty/80/000000/filled-cancel.png"/>
                         <h6>About project</h4>
                         <!-- input text -->
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis totam quam officia, repudiandae voluptatem, accusantium, provident ab dicta minus sapiente ipsam et magnam voluptate facere quisquam unde a repellendus eaque.</p>
                         <button class="flip-box-back-btn btn">Read More</button>
                     </div>
                   </div>
-                  <h4>project name</h2> 
+                  <h4>Binary Calculator</h2> 
                 </div>
               </div> 
 
@@ -144,18 +156,18 @@
                 <div class="flip-box">
                   <div class="flip-box-inner">
                     <div class="flip-box-front">
+                      <img src="img/Tachometer/Tachometer_logo.jpg" alt="Tachometer" style="width: 150%;height: 100%;left: -20%;">
                     </div>
                     <div class="flip-box-back">
-                      <h5>Using Technology</h3>
-                        <!-- input img -->
-                        <img src="" alt="">
+                      <h3>Using Technology</h3>   
+                        <img src="https://img.icons8.com/color/96/000000/arduino.png" alt="Arduino"/>
                         <h6>About project</h4>
                         <!-- input text -->
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis totam quam officia, repudiandae voluptatem, accusantium, provident ab dicta minus sapiente ipsam et magnam voluptate facere quisquam unde a repellendus eaque.</p>
                         <button class="flip-box-back-btn btn">Read More</button>
                     </div>
                   </div>
-                  <h4>project name</h2> 
+                  <h4>Tachometer</h2> 
                 </div>
               </div> 
 
@@ -163,114 +175,62 @@
                 <div class="flip-box">
                   <div class="flip-box-inner">
                     <div class="flip-box-front">
+                      <img src="img/Avtowatering/Avtowatering_logo.jpg" alt="Avtowatering" style="width: 190%;height: 100%;left: -50%;" >
                     </div>
                     <div class="flip-box-back">
-                      <h5>Using Technology</h3>
-                        <!-- input img -->
-                        <img src="" alt="">
+                      <h3>Using Technology</h3>
+                        <img src="https://img.icons8.com/dotty/80/000000/filled-cancel.png"/>
                         <h6>About project</h4>
                         <!-- input text -->
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis totam quam officia, repudiandae voluptatem, accusantium, provident ab dicta minus sapiente ipsam et magnam voluptate facere quisquam unde a repellendus eaque.</p>
                         <button class="flip-box-back-btn btn">Read More</button>
                     </div>
                   </div>
-                  <h4>project name</h2> 
+                  <h4>Avto Watering</h2> 
                 </div>
               </div> 
 
-              <div class="project-block">               
+              <!-- <div class="project-block">               
                 <div class="flip-box">
                   <div class="flip-box-inner">
                     <div class="flip-box-front">
                     </div>
                     <div class="flip-box-back">
-                      <h5>Using Technology</h3>
-                        <!-- input img -->
+                      <h3>Using Technology</h3>
+                         input img 
                         <img src="" alt="">
                         <h6>About project</h4>
-                        <!-- input text -->
+                         input text 
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis totam quam officia, repudiandae voluptatem, accusantium, provident ab dicta minus sapiente ipsam et magnam voluptate facere quisquam unde a repellendus eaque.</p>
                         <button class="flip-box-back-btn btn">Read More</button>
                     </div>
                   </div>
                   <h4>project name</h2> 
                 </div>
-              </div> 
+              </div>  -->
+
             </div>
             <div class="soft-tab">
-              <div class="project-block">               
-                <div class="flip-box">
-                  <div class="flip-box-inner">
-                    <div class="flip-box-front">
-                    </div>
-                    <div class="flip-box-back">
-                      <h5>Using Technology</h3>
-                        <!-- input img -->
-                        <img src="" alt="">
-                        <h6>About project</h4>
-                        <!-- input text -->
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis totam quam officia, repudiandae voluptatem, accusantium, provident ab dicta minus sapiente ipsam et magnam voluptate facere quisquam unde a repellendus eaque.</p>
-                        <button class="flip-box-back-btn btn">Read More</button>
-                    </div>
-                  </div>
-                  <h4>project name</h2> 
-                </div>
-              </div> 
 
               <div class="project-block">               
                 <div class="flip-box">
                   <div class="flip-box-inner">
                     <div class="flip-box-front">
+                      <img src="img/UWPCalculator/UWPCalculator.webp" alt="UWPCalculator" style="width: 130%; height: 100%; left: -50px;">
                     </div>
                     <div class="flip-box-back">
-                      <h5>Using Technology</h3>
+                      <h3>Using Technology</h3>
                         <!-- input img -->
-                        <img src="" alt="">
+                       <img src="https://img.icons8.com/color/96/000000/c-sharp-logo.png" alt="C#"/>
+                       <img src="https://img.icons8.com/ios/100/000000/xaml.png"/>
+                       <img src="https://docs.microsoft.com/en-us/windows/apps/images/logo-winui.png"/> 
                         <h6>About project</h4>
                         <!-- input text -->
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis totam quam officia, repudiandae voluptatem, accusantium, provident ab dicta minus sapiente ipsam et magnam voluptate facere quisquam unde a repellendus eaque.</p>
                         <button class="flip-box-back-btn btn">Read More</button>
                     </div>
                   </div>
-                  <h4>project name</h2> 
-                </div>
-              </div> 
-
-              <div class="project-block">               
-                <div class="flip-box">
-                  <div class="flip-box-inner">
-                    <div class="flip-box-front">
-                    </div>
-                    <div class="flip-box-back">
-                      <h5>Using Technology</h3>
-                        <!-- input img -->
-                        <img src="" alt="">
-                        <h6>About project</h4>
-                        <!-- input text -->
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis totam quam officia, repudiandae voluptatem, accusantium, provident ab dicta minus sapiente ipsam et magnam voluptate facere quisquam unde a repellendus eaque.</p>
-                        <button class="flip-box-back-btn btn">Read More</button>
-                    </div>
-                  </div>
-                  <h4>project name</h2> 
-                </div>
-              </div> 
-
-              <div class="project-block">               
-                <div class="flip-box">
-                  <div class="flip-box-inner">
-                    <div class="flip-box-front">
-                    </div>
-                    <div class="flip-box-back">
-                      <h5>Using Technology</h3>
-                        <!-- input img -->
-                        <img src="" alt="">
-                        <h6>About project</h4>
-                        <!-- input text -->
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis totam quam officia, repudiandae voluptatem, accusantium, provident ab dicta minus sapiente ipsam et magnam voluptate facere quisquam unde a repellendus eaque.</p>
-                        <button class="flip-box-back-btn btn">Read More</button>
-                    </div>
-                  </div>
-                  <h4>project name</h2> 
+                  <h4>UWP Calculator</h2> 
                 </div>
               </div> 
             </div>
@@ -278,7 +238,7 @@
         </div>
       </div>
     </section>
-
+    <!-- Futer block -->
     <section class="futer"> 
       <div class="container">
         <div class="row">
@@ -308,6 +268,7 @@
         <p>2022</p>
       </div>
     </section>
+
     <script src="js/main.js"></script>
     <script src="js/Tab.js"></script>
   </body>

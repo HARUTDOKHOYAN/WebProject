@@ -2,6 +2,7 @@ const btnlist = document.querySelector('.btn-list');
 const btnContactOn = document.querySelector('.header-contact');
 const menulist = document.querySelector('.header-manu-list');
 const menu = document.querySelector('.header-manu');
+const startPaig =document.querySelector(".start-point");
 
 function menuShow(e){
     menulist.classList.toggle('is-open');
@@ -64,4 +65,19 @@ const escClose = (e) => {
   }
 };
 // popup end
-
+var btn = document.querySelector(".start-point-btn");
+document.addEventListener("DOMContentLoaded", (е) => {
+  setTimeout(function() {
+    var text1 = document.querySelector(".start-point-text1");
+    text1.classList.add("start-open");
+  }, 1000);
+  setTimeout(function() {
+    var text2 = document.querySelector(".start-point-text2");
+    text2.classList.add("start-open");
+  }, 3000);
+  setTimeout(function() {
+    btn.classList.add("start-open");
+  }, 4000);
+}); 
+btn.addEventListener("click" , (e) => {
+  startPaig.classList.add("start-close")});
