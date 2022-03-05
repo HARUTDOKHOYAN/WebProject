@@ -2,6 +2,7 @@ var tab1 = document.querySelectorAll(".hard-tab");
 var tab2 = document.querySelectorAll(".soft-tab");
 var btn1 = document.querySelector(".btn-hard");
 var btn2 = document.querySelector(".btn-soft");
+var loader =  document.querySelector(".loader-main");
 
 function hovorbtn1on(e){
     btn1.classList.add("btn-hard-active");
@@ -20,23 +21,31 @@ function hovorbnt2off(e){
     btn2.classList.remove("btn-soft-active");
 }
 function events1(e){
-    hovorbtn1off();
-    tab1.forEach(element => {
-        element.classList.add("tab-on");
-    });
-    tab2.forEach(element => {
-        element.classList.remove("tab-on");
-    });
+    loader.classList.toggle("loader-on");
+    setTimeout(function() { 
+            loader.classList.toggle("loader-on");
+        
+        hovorbtn1off();
+        tab1.forEach(element => {
+            element.classList.add("tab-on");
+        });
+        tab2.forEach(element => {
+            element.classList.remove("tab-on");
+        });
+    },1000);
 }
 function events2(e){
-    hovorbnt2off();
-    tab2.forEach(element => {
-        element.classList.add("tab-on");
-    });
-    tab1.forEach(element => {
-        element.classList.remove("tab-on");
-    });
-    console.log("clik")
+    loader.classList.toggle("loader-on");
+        setTimeout(function() { 
+            loader.classList.toggle("loader-on");
+        hovorbnt2off();
+        tab2.forEach(element => {
+            element.classList.add("tab-on");
+        });
+        tab1.forEach(element => {
+            element.classList.remove("tab-on");
+        });
+    },1000);
 }
 
 
