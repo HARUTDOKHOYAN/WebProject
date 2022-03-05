@@ -27,7 +27,6 @@ html {
   background: transparent;
 }
 .start-point {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
