@@ -4,7 +4,7 @@
 @buttonColor: rgb(20, 1, 1);
 @menuColor: rgba(105, 97, 97, 0.884);
 @textColor: rgb(14, 10, 10);
-@startTextColor:rgba(255, 255, 255, 0.582);
+@startTextColor:rgb(161, 160, 160);
 body , html{
     overflow: auto;
     overflow-x: hidden;
@@ -51,14 +51,24 @@ html{
     &-main{
         position: relative;
         top: 30%;
+        font-family: 'BhuTuka Expanded One', cursive;
+        font-family: 'BioRhyme Expanded', serif;
+        font-size: 30px;
+        padding: 10px;
+        line-height: 30px;
     }
     &-text1{
-        color: @startTextColor;
+        background: -webkit-linear-gradient(rgba(224,224,224,1) -38%, rgb(53, 53, 53) 80%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         visibility: collapse;
         opacity: 0;
         transition: all 1.5s;
     }
     &-text2{
+        background: -webkit-linear-gradient(0deg, rgba(224,224,224,1) -38%, rgb(61, 61, 61) 83%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         color: @startTextColor ;
         visibility: collapse;
         opacity: 0;

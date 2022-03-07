@@ -42,22 +42,32 @@ html {
 .start-point-main {
   position: relative;
   top: 30%;
+  font-family: 'BhuTuka Expanded One', cursive;
+  font-family: 'BioRhyme Expanded', serif;
+  font-size: 30px;
+  padding: 10px;
+  line-height: 30px;
 }
 .start-point-text1 {
-  color: rgba(255, 255, 255, 0.582);
+  background: -webkit-linear-gradient(#e0e0e0 -38%, #353535 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   visibility: collapse;
   opacity: 0;
   transition: all 1.5s;
 }
 .start-point-text2 {
-  color: rgba(255, 255, 255, 0.582);
+  background: -webkit-linear-gradient(0deg, #e0e0e0 -38%, #3d3d3d 83%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #a1a0a0;
   visibility: collapse;
   opacity: 0;
   transition: all 1.5s;
 }
 .start-point-btn {
   font-size: 20px;
-  color: rgba(255, 255, 255, 0.582);
+  color: #a1a0a0;
   visibility: collapse;
   opacity: 0;
   transition: all 1s;
