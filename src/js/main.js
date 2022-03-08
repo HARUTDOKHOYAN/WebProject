@@ -66,13 +66,13 @@ const escClose = (e) => {
 };
 // popup end
 var btn = document.querySelector(".start-point-btn");
+var text2 = document.querySelector(".start-point-text2");
+var text1 = document.querySelector(".start-point-text1");
 document.addEventListener("DOMContentLoaded", (е) => {
   setTimeout(function() {
-    var text1 = document.querySelector(".start-point-text1");
     text1.classList.add("start-open");
   }, 1000);
   setTimeout(function() {
-    var text2 = document.querySelector(".start-point-text2");
     text2.classList.add("start-open");
   }, 3000);
   setTimeout(function() {
@@ -80,4 +80,7 @@ document.addEventListener("DOMContentLoaded", (е) => {
   }, 4000);
 }); 
 btn.addEventListener("click" , (e) => {
+  btn.classList.add("start-close");
+  text2.classList.add("start-close");
+  text1.classList.add("start-close");
   startPaig.classList.add("start-close")});
