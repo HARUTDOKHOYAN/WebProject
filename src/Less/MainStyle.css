@@ -9,24 +9,27 @@ html {
   scroll-behavior: smooth;
 }
 .link {
+  font-family: 'Noto Serif', serif;
   display: inline;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 800;
   padding: 10px;
-  color: #bebbbb;
+  color: #d6d6d6;
 }
 .link:hover {
-  color: #7a7575;
+  color: rgba(141, 140, 140, 0.699);
 }
 .btn {
   box-shadow: none !important;
   border: none;
+  margin: 0px;
   box-shadow: none;
   text-align: center;
   background: transparent;
 }
 .start-point {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -263,8 +266,21 @@ html {
   text-align: center;
 }
 .skills img {
-  max-width: 100px;
-  max-height: 100px;
+  margin: 5px;
+  max-width: 80px;
+  max-height: 80px;
+}
+.skills-box {
+  background: rgba(170, 169, 169, 0.637);
+  padding: 1rem 1rem;
+  margin: 10px;
+  transition: all 0.5s ease;
+  color: #41403E;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  outline: none;
+  box-shadow: 20px 38px 34px -26px rgba(0, 0, 0, 0.329);
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
 }
 .project {
   text-align: center;

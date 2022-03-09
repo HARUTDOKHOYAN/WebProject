@@ -1,5 +1,5 @@
 //constant
-@hovorcalor:  rgb(122, 117, 117);
+@hovorcalor:  rgba(141, 140, 140, 0.699);
 @buttonColorHover: rgb(255, 255, 255);
 @buttonColor: rgb(20, 1, 1);
 @menuColor: rgba(105, 97, 97, 0.884);
@@ -15,6 +15,7 @@ html{
     scroll-behavior: smooth;
 }
 .link{
+    font-family: 'Noto Serif', serif;
     display: inline;
     &:hover{
         color: @hovorcalor;
@@ -23,11 +24,12 @@ html{
     text-transform: uppercase;
     font-weight: 800;
     padding: 10px;
-    color: rgb(190, 187, 187);
+    color: rgb(214, 214, 214);
 }
 .btn {
     box-shadow: none !important;
     border: none;
+    margin: 0px;
     box-shadow: none;
     text-align: center;
     background: transparent;
@@ -35,7 +37,7 @@ html{
 //constant 
 
 .start-point{
-     //display: none;
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -281,9 +283,23 @@ html{
 .skills{
     text-align: center;
     img{
-        max-width: 100px;
-        max-height: 100px;
+        margin: 5px;
+        max-width: 80px;
+        max-height: 80px;
     }
+}
+.skills-box{
+    background:rgba(170, 169, 169, 0.637);
+    padding:1rem 1rem;
+    margin:10px;
+    transition:all .5s ease;
+    color:#41403E;
+    font-size:2rem;
+    letter-spacing:1px;
+    outline:none;
+    box-shadow: 20px 38px 34px -26px rgba(0, 0, 0, 0.329);
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+
 }
 
 .project{
