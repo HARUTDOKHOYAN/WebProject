@@ -4,26 +4,27 @@ html {
   overflow-x: hidden;
   background: url(../img/cool-background.png) no-repeat center;
   background-size: cover;
+  font-family: 'Noto Serif', serif;
 }
 html {
   scroll-behavior: smooth;
 }
 .link {
-  font-family: 'Noto Serif', serif;
+  font-size: 17px;
   display: inline;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 800;
-  padding: 10px;
   color: #d6d6d6;
 }
 .link:hover {
   color: rgba(141, 140, 140, 0.699);
 }
 .btn {
+  font-size: 18px;
+  font-weight: 500;
   box-shadow: none !important;
   border: none;
-  margin: 0px;
   box-shadow: none;
   text-align: center;
   background: transparent;
@@ -177,7 +178,7 @@ html {
 }
 .header-main {
   padding: 5px;
-  background-color: rgba(105, 97, 97, 0.884);
+  background-color: rgba(105, 97, 97, 0.9);
   position: fixed;
   width: 100%;
   left: 0;
@@ -190,7 +191,7 @@ html {
   height: 0px;
   display: block;
   width: 70%;
-  background: rgba(105, 97, 97, 0.884);
+  background: rgba(105, 97, 97, 0.9);
   align-items: center;
   position: absolute;
   transition: height 0.3s ease-out;
@@ -286,7 +287,7 @@ html {
   text-align: center;
 }
 .futer {
-  background-color: rgba(105, 97, 97, 0.884);
+  background-color: rgba(105, 97, 97, 0.9);
   width: 100%;
   height: 100%;
   text-align: center;

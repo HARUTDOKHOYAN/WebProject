@@ -2,7 +2,7 @@
 @hovorcalor:  rgba(141, 140, 140, 0.699);
 @buttonColorHover: rgb(255, 255, 255);
 @buttonColor: rgb(20, 1, 1);
-@menuColor: rgba(105, 97, 97, 0.884);
+@menuColor: rgba(105, 97, 97, 0.9);
 @textColor: rgb(14, 10, 10);
 @startTextColor:rgb(161, 160, 160);
 body , html{
@@ -10,12 +10,13 @@ body , html{
     overflow-x: hidden;
     background: url(../img/cool-background.png) no-repeat center;
     background-size: cover;
+    font-family: 'Noto Serif', serif;
 }
 html{
     scroll-behavior: smooth;
 }
 .link{
-    font-family: 'Noto Serif', serif;
+    font-size: 17px;
     display: inline;
     &:hover{
         color: @hovorcalor;
@@ -23,13 +24,13 @@ html{
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 800;
-    padding: 10px;
     color: rgb(214, 214, 214);
 }
 .btn {
+    font-size: 18px;
+    font-weight: 500;
     box-shadow: none !important;
     border: none;
-    margin: 0px;
     box-shadow: none;
     text-align: center;
     background: transparent;
