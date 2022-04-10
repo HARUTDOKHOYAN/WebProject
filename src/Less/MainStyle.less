@@ -10,7 +10,8 @@ body , html{
     overflow-x: hidden;
     background: url(../img/cool-background.png) no-repeat center;
     background-size: cover;
-    font-family: 'Noto Serif', serif;
+    font-family: 'Montserrat'sans-serif;
+    font-weight: 400;
 }
 html{
     scroll-behavior: smooth;
@@ -23,6 +24,7 @@ html{
     }
     text-decoration: none;
     text-transform: uppercase;
+    font-family:  'Cormorant', serif;
     font-weight: 800;
     color: rgb(214, 214, 214);
 }
@@ -38,7 +40,7 @@ html{
 //constant 
 
 .start-point{
-    //display: none;
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -279,6 +281,11 @@ html{
 
 .about{
     text-align: center;
+    &-main{
+        p{
+            font-size: 20px;
+        }
+    }
 }
 
 .skills{
