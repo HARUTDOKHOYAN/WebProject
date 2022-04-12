@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <title>Portfolio</title>
         <link rel="stylesheet" href="../css/bootstrap.css">
-        <link rel="stylesheet" href="../Less/PageStyle.css"> 
+        <link rel="stylesheet" href="../css/PageStyle.css"> 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=BhuTuka+Expanded+One&display=swap" rel="stylesheet">
@@ -14,16 +14,11 @@
     <div class="header-main">
       <div class="container">
         <div class="row">
-          <button class="btn-list btn col-sm-2 col-1"> 
-            <span class="burger"></span>
-          </button>
-          <img class="header-logo col-lg-2 col-md-1 col-sm-2 col-2 offset-1" src="../img/Project-Logo.png" alt="HD">
-          <div class="header-manu col-lg-5 offset-lg-1 col-md-6 offset-md-0">
-            <button class="btn"><a class="link about-link">About</a></button>
-            <button class="btn"><a class="link skills-link">Skills</a></button>
-            <button class="btn"><a class="link projects-link">Projects</a></button>
+          <img class="header-logo col-lg-2 col-md-2 col-sm-2  col-2 offset-1"  src="../img/Project-Logo.png" alt="HD">
+          <div class="header-manu col-lg-5 offset-lg-2 col-md-7 offset-md-1 col-sm-8 offset-sm-0 col-6">
+            <h3>Automatic Irrigation Machine</h3>
           </div>
-          <button class="header-contact btn col-lg-1 offset-lg-3 col-md-2 offset-md-1 col-sm-3  offset-sm-4 col-3 offset-3" data-id="Popup-model"><spam>Contact</spam></button>
+          <button class="header-contact btn col-lg-1 offset-lg- col-md-1 offset-md-0 col-sm-1  offset-sm-0 col-2 offset-0" onclick="window.location.href=href='../index.html'"><spam>Home</spam></button>
       </div>
         <div class="header-manu-list">
             <div ><a class="link about-link"  >About</a></div>
@@ -33,3 +28,40 @@
       </div>
     </div>
   </section>
+<section class="mainPage">
+  <h3 class="backgroundH3"><span>What is this project about?</span></h3>
+  <p>This project’s goal is to build a  machine that will measure soil moisture<br>
+     and turn on auto watering using an lm358 operational amplifier.</p>
+  <h3 class="backgroundH3"><span>What  was used for the project?</span></h3>
+  <p>In order to accomplish the project I needed to know how to:</p>
+  <ul class="col-lg-4 offset-lg-4 col-md-8 offset-md-2 col-sm-10 offset-sm-1">
+    <li>use voltage separator</li>
+    <li>assemble a pump</li>
+    <li>work LM358  logic elements</li>
+  </ul>
+  <p>For that I used: </p>
+  <ul class="col-lg-4 offset-4">
+    <li>LM358</li>
+    <li>Resistors</li>
+    <li>Transistor</li>
+    <li>Relay</li>
+    <li>Potentiometer</li>
+    <li>Diode </li>
+  </ul>
+  <h3 class="backgroundH3"><span> What was the process to achieve my goal?</span></h3>
+  <p>In this project, I decided not to use Arduino,<br>
+     but measure soil moisture using an operational amplifier such as a comparator.</p>
+  <img src="../img/Avtowatering/Mikrosxeman.gif" style="width: 300px;" alt="Micro">
+  <p>I sent the signal from the soil to the first input through a voltage separator <br>
+     and to the second input from a potentiometer.</p>
+  <p>Then I learned how the adder works and collected them from logical elements. See below:</p>
+  <img src="../img/Avtowatering/Gcagir3.png" alt="Foto">
+  <p>if the soil voltage is less than the potentiometer voltage, the relay turns on to start the engine.</p>
+  <img src="https://lh3.googleusercontent.com/fife/AAWUweWuQNQQHzQQxdRyZFe509JCeDEODvwwle8UH4hLrBob-byXzJE0Lb8VtmYfbxoblLU_48sE6fyzsc2eInGkw_zhxeR4Yuo1T9ERDVnGSmDr2o6cx9j_o2HjwVKkH_qPa8S4K4K6b1h8_5H7DHA_gvkaCWZ0sXuKzU8H5EfR0WLgA_pQsERjV34E8yhGYJ2i9o39snETRmm98nXFBQnizfbtHzclYFzV154B0mav_3Fa25UmIeXV4NcB9FgYQztcl-EvnGHJAtg1vTM0Tsz-kKQfVD9JqWM6NJnpc6jN3uBDIvX-mNDa50HfyIMJOTN3G7b217El-iuLxIafxHuXo9CFKqpUAA0otVn4XKCARVDpPHOcsr8NKvYFMwHRMuT21Cu6FFMo3EFedBOn3eIcnl23kLoOx8LY1pfgSvFnuJkEgl-TAharFBkfxihlNGv17HnwIX50LkbM4Sbed8yuFsrFCIUYdmg6lJ7L0uH4UAIBqCQYSdAOL5rDTtA3evoejOcjlE-pEhQN2hAihQyyPb4jXDDn-V9Zmn4qlm3GugPDKPS5AuBMBs-C_6DxouotukDW6Odd_m1HePtMYF6775dJ-jd0UrWDekUHOgyMsZAJE82nTocnIud9EFcKoKQDUtywdbppLlyWCybYVGtea3e4QStsGRTvL0lp5o6s6ET3sa_g7cC-NBAxhV74TygJY8EoZElGJ3KdjTwWfw34nJw3oeQirLZ35ha19a7qYvPSVXyIoyIbI_HgFSvW0_FxRISsM3R0Dj0QvEcNJJaAvVQFV50bXdVYqUG7B0BXIL04fQLxmr_p3o0IR9aF_aN6Zazn__-vVJwdpd1ITyp4LFjFPotgSwM=w1920-h924" alt="foto">
+  <p>Аnd finally, I assembled a pump from a syringe and a 6v motor.</p>
+  <img src="https://lh3.googleusercontent.com/fife/AAWUweWyYDU6OJwserMUvW4i8s8bCF4GkVZU-D-wP5NJhZyY-sV_Kj-bRS07FDjuwrWBKFkJmrySCNukpLTC-eRK9FW3Smn-D8iYKGjmY1kJ_een6ZeF9CRsCmvuHfezY6O5h_t005X7ljhrWvjI1762KdtjQqCaO7-YKFLDUZk_akzUSkYsT_CLEnqEEYqKFbP2yn2p7ycuP9Mpukx3dXzXEFz2x6iBiZ5EKZlWx7h1Kl9wU3wu2wDaUCUgfUeJEBhUlK_8Q-kN-S0EyksKgDJyXyEpzRZNZ9vIcHiq5to5tly5E8k6NbR_weqXsIPqQ1R2UWaTAty54symfnr1dDGC-lwyfv80L8MrZ77iWA9I9ZnyNq6P4CN0EppDccJdWhjlPHgCICn9xNVIZrKNfOAUBqHiIN-MDXElcyxW1RnKa3nxu5V2wmW-KHMfW068C6THyVF7CIoSS2yg6J08krYUlUPffy4GJ2GhVGnrJ3Vc-LLcl-3UMYbXiOxDlFkPP6q_aqIRWhQrJQhQr_vPUcVdFzpRj7NDCnERnSPuSZxlKaja9P-EHpHjEEu-vt3uV9yIWp0nXwW382FxHKPUqTWzDWSvIEsoN2WrZRg4f0g8f9a91VhEcenp8jyeT9aGamTUes_URv6LwIBLNEqauUUeMbaKDpn4ksP7pqF10rpl3KcdRmU1-zUeTonkvWODWS_3tcOkhdYytWzXOsFe4Ug8MGya7I-ITETfhaNMt53vZtvFbIMg0MvE9qgH7Q2oCJ-NKXlAnTLB2mi9aYkJ6vT5fesGFCuGoqFjvEgn7Q6G6F1xFrmLKnZAOwpBYMhedu2HgO25SL6H4UynNt8qrR9STYA9TrgeBjY=w1920-h924" alt="foto">
+  <h3 class="backgroundH3"><span>Project Result</span></h3>
+  <img src="https://lh3.google.com/u/0/d/1j2I7x7l_nLET7Aat9R6aq8jJWAsctN6a=w1920-h924-iv1" alt="foto">
+  <img src="https://lh3.google.com/u/0/d/1gB-GHqwaQuHm5q-WLzMdi28Rrf86d8bH=w1920-h924-iv1" alt="Automatic watering machine" alt="foto">
+  
+</section>

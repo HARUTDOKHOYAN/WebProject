@@ -117,14 +117,6 @@ html {
   transform: translateY(-16px) skew(0deg);
 }
 .header-main {
-  h3{
-    @media screen and (max-width: 424.9px) {
-      font-size: 20px;
-  }
-  @media screen and (max-width: 374.9px) {
-    font-size: 16px;
-}
-  }
   padding: 5px;
   background-color: rgba(105, 97, 97, 0.9);
   position: fixed;
@@ -132,6 +124,16 @@ html {
   left: 0;
   top: 0;
   z-index: 50 ;
+}
+@media screen and (max-width: 424.9px) {
+  .header-main h3 {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 374.9px) {
+  .header-main h3 {
+    font-size: 16px;
+  }
 }
 .header-manu-list {
   margin-top: 5px;
@@ -144,67 +146,68 @@ html {
   position: absolute;
   transition: height 0.3s ease-out;
 }
-
 .header-logo {
   width: 80px;
   height: 30px;
 }
-.mainPage{
+.mainPage {
   text-align: center;
-  margin-top:70px;
-
-  ul{
-    text-align: left;
-    li{
-    font-size: 16px;
-    }
-  }
-  img{
-    text-align: center;
-    margin: 60px;
-    width: 500px;
-    height: auto;
-    @media screen and (max-width: 615.9px) {
-      width: 300px;
-  } 
-  @media screen and (max-width: 330.9px) {
-    width: 200px;
-} 
-  }
-  .code{
-    text-align: left;
-    font-size: 18px;
-    padding: 30px;
-    background-color: #ffffff;
-    
-  }
-  p{
-    font-size: 19px;
-  }
-  h3 {
-    font: 33px sans-serif;
-    margin-top: 30px;
-    text-align: center;
-    text-transform: uppercase;
+  margin-top: 70px;
 }
-
-  h3.backgroundH3 {
-      position: relative;
-      z-index: 1;
-      
-      &:before {
-          border-top: 2px solid #8a8686;
-          content:"";
-          margin: 0 auto; 
-          position: absolute;
-          top: 50%; left: 0; right: 0; bottom: 0;
-          width: 95%;
-          z-index: -1;
-      }
-
-      span {
-          background: rgb(168, 165, 165); 
-          padding: 0 15px; 
-      }
+.mainPage ul {
+  text-align: left;
+}
+.mainPage ul li {
+  font-size: 16px;
+}
+.mainPage img {
+  text-align: center;
+  margin: 60px;
+  width: 500px;
+  height: auto;
+}
+@media screen and (max-width: 615.9px) {
+  .mainPage img {
+    width: 300px;
   }
+}
+@media screen and (max-width: 330.9px) {
+  .mainPage img {
+    width: 200px;
+  }
+}
+.mainPage .code {
+  text-align: left;
+  font-size: 18px;
+  padding: 30px;
+  background-color: #ffffff;
+}
+.mainPage p {
+  font-size: 19px;
+}
+.mainPage h3 {
+  font: 33px sans-serif;
+  margin-top: 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.mainPage h3.backgroundH3 {
+  position: relative;
+  z-index: 1;
+}
+.mainPage h3.backgroundH3:before {
+  border-top: 2px solid #8a8686;
+  content: "";
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 95%;
+  z-index: -1;
+}
+.mainPage h3.backgroundH3 span {
+  background: #a8a5a5;
+  padding: 0 15px;
 }

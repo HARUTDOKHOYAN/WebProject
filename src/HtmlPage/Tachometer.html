@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <title>Portfolio</title>
         <link rel="stylesheet" href="../css/bootstrap.css">
-        <link rel="stylesheet" href="../Less/PageStyle.css"> 
+        <link rel="stylesheet" href="../css/PageStyle.css"> 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=BhuTuka+Expanded+One&display=swap" rel="stylesheet">
@@ -14,22 +14,101 @@
     <div class="header-main">
       <div class="container">
         <div class="row">
-          <button class="btn-list btn col-sm-2 col-1"> 
-            <span class="burger"></span>
-          </button>
-          <img class="header-logo col-lg-2 col-md-1 col-sm-2 col-2 offset-1" src="../img/Project-Logo.png" alt="HD">
-          <div class="header-manu col-lg-5 offset-lg-1 col-md-6 offset-md-0">
-            <button class="btn"><a class="link about-link">About</a></button>
-            <button class="btn"><a class="link skills-link">Skills</a></button>
-            <button class="btn"><a class="link projects-link">Projects</a></button>
+          <img class="header-logo col-lg-2 col-md-2 col-sm-2  col-2 offset-1"  src="../img/Project-Logo.png" alt="HD">
+          <div class="header-manu col-lg-5 offset-lg-2 col-md-7 offset-md-1 col-sm-8 offset-sm-0 col-6">
+            <h3>Tachometer</h3>
           </div>
-          <button class="header-contact btn col-lg-1 offset-lg-3 col-md-2 offset-md-1 col-sm-3  offset-sm-4 col-3 offset-3" data-id="Popup-model"><spam>Contact</spam></button>
-      </div>
-        <div class="header-manu-list">
-            <div ><a class="link about-link"  >About</a></div>
-            <div ><a class="link skills-link" >Skills</a></div>
-            <div ><a class="link projects-link" >Projects</a></div>
-        </div>
-      </div>
+          <button class="header-contact btn col-lg-1 offset-lg- col-md-1 offset-md-0 col-sm-1  offset-sm-0 col-2 offset-0" onclick="window.location.href=href='../index.html'"><spam>Home</spam></button>
     </div>
   </section>
+<section class="mainPage">
+  <h3 class="backgroundH3"><span>What is this project about?</span></h3>
+  <p>This project is designed to calculate the number of engine <br>
+     revolutions per minute using Arduino and lm3914.</p>
+  <h3 class="backgroundH3"><span>What  was used for the project?</span></h3>
+  <p>In order to accomplish the project I needed to know how to:</p>
+  <ul class="col-lg-4 offset-lg-4 col-md-8 offset-md-2 col-sm-10 offset-sm-1">
+    <li>calculate engine rotation</li>
+    <li>work “RC” integrator</li>
+    <li>work LM3914  logic elements</li>
+    <li>work IR obstacle sensors</li>
+  </ul>
+  <p>For that I used: </p>
+  <ul class="col-lg-4 offset-4">
+    <li>MH-B IR obstacle sensors</li>
+    <li>Arduino</li>
+    <li>LM3914</li>
+    <li>Resistors</li>
+    <li>Capacitor</li>
+  </ul>
+  <h3 class="backgroundH3"><span> What was the process to achieve my goal?</span></h3>
+  <p>I decided to collect information from the sensor using Arduino. <br>
+     Arduino calculated the revolutions and sent a PWM signal.</p>
+  <img style="width: 400px; " src="../img/Tachometer/IR Sensor.jpg" alt="IR">
+  <h4>Code in Arduino</h4>
+  <div class="code">
+    <code>
+      <pre>
+      unsigned long int rot =0;
+      unsigned long int lastrot =0;
+      unsigned long int tm;
+      unsigned long int spd =0;
+      unsigned long int rpm =0;
+      unsigned  int dt =0;
+      int OutPut = 9;
+      int rpm_array[5] = {0,0,0,0,0};
+      
+      
+      
+      void Detect()
+      {
+      rot++;
+      lastrot = rot;
+      dt = millis() - tm;
+      
+      
+        if(dt >= 100)
+          {
+            spd = rot*60000/dt;
+            rot = 0;
+            tm = millis();  
+          }
+        
+        
+      }
+
+      void setup()
+      {
+
+      attachInterrupt(0, Detect, RISING);
+      tm = millis();
+      Serial.begin(9600);
+      }
+
+      void loop()
+      {
+      rpm_array[0] = rpm_array[1];
+      rpm_array[1] = rpm_array[2];
+      rpm_array[2] = rpm_array[3];
+      rpm_array[3] = rpm_array[4];
+      rpm_array[4] = spd;    
+      
+      rpm = (rpm_array[0] + rpm_array[1] + rpm_array[2] + rpm_array[3] + rpm_array[4]) / 5;
+      
+      analogWrite(OutPut,rpm/5);
+      Serial.println(spd);
+      Serial.print("/--------------/");
+      Serial.println(spd/6);
+      delay(300); }
+    </pre>
+    </code>
+  </div>
+  <p> Then I connected the PWM signal through the RC filter to the LM3914  </p>
+  <img src="../img/Tachometer/Schem_LM3914.png" alt="Foto">
+  <p>And finally, I show the signal on the LED display.</p>
+  <img src="../img/Tachometer/Gcagir2.png" alt="foto">
+  <img src="https://lh3.google.com/u/0/d/1uZkoFuFeJOoIU9UrOgl7NddZxhiENXYx=w1920-h924-iv1" alt="foto" >
+  <h3 class="backgroundH3"><span>Project Result </span></h3>
+  <img src="../img/Tachometer/Patrasti Proekt.jpg" alt="foto" >
+  <img src="https://lh3.googleusercontent.com/fife/AAWUweVawqv7iOEev7ynBrWZI7QNHeWyOBfhE_x_YIFPnhaejj1PWtlEvc3JS2VSLulGhkp-mhIBLY7nKzy2AEkAzNaWhH9_yV3l5VL9ut8uPld8Y_bnadscTe3OuuHzHGbi7NCERSzT9O0V0nwQ5xHHrxSTGvVmzawGSg130uMXXwK9M8EUIX74nTzWZW6q66K3UL8y_t1b-PcS3FvOaLNgmpcgnHzCAC1q8GHP28LlVIUnTYLvG3pZI0FgeNiQiOjMLo4U9kPn5BUx3Nfye2dbJhthTxByXMceNpCM-oIFe1KtagSXif255a6mJDvoVnTevKYsxv5GB_BxYdkaw7scQBEdxLF8ntfiCY9ZVe_-fObgw0c_TOr3pn8_GWExoqEaO4JiInJz1kAsVIl_jiozQ0OFlY6wTxxlTyDOiHBC4oO3FwMIp1KRY_bco2nFLj-oZTFlmC1FFa4a7XfXhfitGS_O6x6dE-sFv4Vf2EWCMuYI3UClSMsEjfH3wUK43LamrNnWqT6OujcW8Qdgp0VXWVPhdCe5aZEit1gmrrJaULzOCLdl0u2NLSnOEQfYIZ039KjugiZuBuIogUDstJWSn9RJL4jMxIncMzcXN5cVhggOe1uHy099zJYvNJ4PcGYT56RuupE6gjg1m4LC1uxZQ_asw4sPdSgnhL0QFsxa3Ej-_tbFFyGAQKQvyUAqri9gp5YA8MzP5s1mYL7sz40FH1eOYA5RVuroRmVqBNKH8QQnJUfu-i7LocBN3eZV-zWyiO_5yD_0dgCbCgQCBFiYOu3wKSEVS5rIVrbWR_hEFtc3EYcJd-MDdzx2BcKzuE_AjcUso0e_9H6xYjNJZu6gOb-XHXaQhHI=w1920-h924" alt="foto">
+</section>
