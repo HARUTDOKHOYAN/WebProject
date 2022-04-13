@@ -19,7 +19,7 @@
     <section class="header">
       <div class="header-main">
         <div class="container">
-          <div class="row">
+          <div class="row" href="#_about">
             <button class="btn-list btn col-sm-2 col-1"> 
               <span class="burger"></span>
             </button>
@@ -32,9 +32,9 @@
             <button class="header-contact btn col-lg-1 offset-lg-3 col-md-2 offset-md-1 col-sm-3  offset-sm-4 col-3 offset-3" data-id="Popup-model"><spam>Contact</spam></button>
         </div>
           <div class="header-manu-list">
-              <div ><a class="link about-link"  >About</a></div>
-              <div ><a class="link skills-link" >Skills</a></div>
-              <div ><a class="link projects-link" >Projects</a></div>
+              <div ><a class="link about-link" href="#_about">About</a></div>
+              <div ><a class="link skills-link" href="#_skills" >Skills</a></div>
+              <div ><a class="link projects-link" href="#_project">Projects</a></div>
           </div>
         </div>
       </div>
@@ -68,17 +68,18 @@
     </div>
     <!-- Switch panel start-->
     <div class="switch-panel">
-      <div class="row">
-        <button class="btn btn-hard"></button>
+      <div class="row" >
+        <button class="btn btn-hard" ></button>
         <button class="btn btn-soft"></button>
       </div>
     </div>
     <!-- About block -->
+    <div  id="_about"></div>
     <section class="about">
       <div class="about-main">
         <div class="container">
           <h2>ABOUT</h2>
-          <div class="main-tab" >
+          <div class="main-tab">
             <div class="hard-tab tab-on"> 
               <p>Since childhood, I was very passionate about engineering. 
               <br> Construction toys were always the ones to keep me busy for hours.
@@ -98,7 +99,7 @@
       </div>
     </section>
     <!-- Skills block -->
-    <section class="skills">
+    <section class="skills" id="_skills">
       <div class="skills-main">
         <div class="container">
           <h2>SKILLS</h2>
@@ -133,13 +134,12 @@
       </div>
     </section>
     <!-- Project block -->
-    <section class="project">
+    <section class="project" id="_project">
       <div class="project-main">
         <div class="container">
           <h2>PROJECTS</h2>
           <div class="main-tab" >
             <div class="hard-tab tab-on"> 
-
               <div class="project-block">               
                 <div class="flip-box">
                   <div class="flip-box-inner">
@@ -150,7 +150,6 @@
                       <h3>Using Technology</h3>
                         <img src="https://img.icons8.com/dotty/80/000000/filled-cancel.png"/>
                         <h6>About project</h4>
-                        <!-- input text -->
                         <p>Binary Calcuolator is bild based in "n-p-n"  transistors assembled adders.</p>
                         <button onclick="window.location.href=href='BinaryCalculator.html' " class="flip-box-back-btn btn" >Read More</button>
                     </div>
@@ -270,7 +269,7 @@
           <h6>Web sayte source</h6>
           <a class="link col-lg-2 offset-lg-5" href="https://github.com/HARUTDOKHOYAN/WebProject">Github</a>
         </div>
-        <p>Version 0.1.0</p>
+        <p>Version 0.1.1</p>
         <p>2022</p>
       </div>
     </section>

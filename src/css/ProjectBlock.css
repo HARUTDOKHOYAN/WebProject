@@ -7,7 +7,7 @@
   width: 400px;
   height: 400px;
 }
-@media screen and (max-width: 410.9px) {
+@media screen and (max-width: 439.9px) {
   .project-block {
     width: 250px;
     height: 250px;
@@ -65,7 +65,7 @@
   position: relative;
   display: block;
 }
-@media screen and (max-width: 410.9px) {
+@media screen and (max-width: 439.9px) {
   .project-block .flip-box-front img {
     left: 0;
   }
@@ -80,12 +80,12 @@
   display: block;
   font-size: 15px;
 }
-@media screen and (max-width: 410.9px) {
+@media screen and (max-width: 439.9px) {
   .project-block .flip-box-back p {
     display: none;
   }
 }
-@media screen and (max-width: 410.9px) {
+@media screen and (max-width: 439.9px) {
   .project-block .flip-box-back h3 {
     font-size: 20px;
   }
@@ -95,7 +95,7 @@
     display: none;
   }
 }
-@media screen and (max-width: 410.9px) {
+@media screen and (max-width: 439.9px) {
   .project-block .flip-box-back h6 {
     font-size: 10px;
   }
@@ -114,7 +114,7 @@
   top: 85%;
   left: 36%;
 }
-@media screen and (max-width: 410.9px) {
+@media screen and (max-width: 439.9px) {
   .project-block .flip-box-back button {
     top: 70%;
     left: 24%;

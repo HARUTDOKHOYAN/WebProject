@@ -10,17 +10,17 @@ function menuShow(e){
 function menuLinksClick(e){
     if(e.target.closest(".about-link")){
         var scrollItem = document.querySelector('.about');
-        scrollItem.scrollIntoView();
+        scrollItem.scrollIntoView({behavior: "smooth"});
         window.scrollBy(0,-50);
     }
     if(e.target.closest(".skills-link")){
         var scrollItem = document.querySelector('.skills');
-        scrollItem.scrollIntoView();
+        scrollItem.scrollIntoView({behavior: "smooth"});
         window.scrollBy(0,-50);
     }
     if(e.target.closest(".projects-link")){
         var scrollItem = document.querySelector('.project');
-        scrollItem.scrollIntoView();
+        scrollItem.scrollIntoView({behavior: "smooth"});
         window.scrollBy(0,-50);
     }
     menulist.classList.toggle('is-open');
