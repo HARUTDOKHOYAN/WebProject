@@ -264,11 +264,13 @@ html {
 }
 .about {
   text-align: center;
+  margin-top: 50px;
 }
 .about-main p {
   font-size: 20px;
 }
 .skills {
+  margin-top: 60px;
   text-align: center;
 }
 .skills img {
@@ -289,6 +291,7 @@ html {
   border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
 }
 .project {
+  margin-top: 60px;
   text-align: center;
 }
 .futer {
